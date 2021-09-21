@@ -6,6 +6,7 @@ jobs:
     strategy:
       matrix:
        node-version: [10.x,12.x,14.x]
+       site: [dev,test,prod]
        include:
          - node-version: 10.x
            site: "prod"
