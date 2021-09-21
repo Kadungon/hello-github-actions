@@ -8,12 +8,12 @@ jobs:
        node-version: [10.x,12.x,14.x]
        site: [dev,test,prod]
        include:
-         - node-version: 10.x
-           site: "val"
+         - node-version: 13.x
+         - site: "val"
            datacenter: "site-a"
          - node-version: 12.x
-           site: "dev"
-           datacenter: "site-b"
+           site: "qa"
+           datacenter: "site-c"
     steps:
       - name: Echo site details
         env:
