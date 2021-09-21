@@ -4,7 +4,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: step1
+      - id : step1
         env:
           REF: ${{ github.ref }}
         run: |
@@ -12,7 +12,7 @@ jobs:
              echo $REF 
       - name: step2
         env:
-          REF: ${{ steps.step1.conclusion }}
+          REF: ${{ steps.step1.outcome }}
         run: |
              echo $STEPS_STEP1_CONCLUSION 
              echo $REF 
