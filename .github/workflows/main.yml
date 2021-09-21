@@ -8,7 +8,7 @@ jobs:
         uses: actions/checkout@v2
       - name: step2
         env:
-          REF: ${{ steps.checkout.outcome }}
+          REF: ${{ hashFiles('**/README.md') }}
         run: |
              echo $STEPS_STEP1_CONCLUSION 
              echo $REF 
