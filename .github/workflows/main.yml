@@ -9,7 +9,7 @@ jobs:
        site: [dev,test,prod]
        include:
          - node-version: 10.x
-           site: "prod"
+           site: "val"
            datacenter: "site-a"
          - node-version: 12.x
            site: "dev"
