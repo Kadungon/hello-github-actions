@@ -4,9 +4,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo site details
+      - name: step1
         env:
           REF: ${{ github.ref }}
         run: |
              echo $GITHUB_REF 
+             echo $REF 
+      - name: step2
+        env:
+          REF: ${{ steps.step1.conclusion }}
+        run: |
+             echo $STEPS_STEP1_CONCLUSION 
              echo $REF 
