@@ -7,4 +7,6 @@ jobs:
       - name: Echo site details
         env:
           REF: ${{ github.ref }}
-        run: echo ${github.ref}
+        run: |
+             echo $GITHUB_REF 
+             echo $REF 
