@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id : step1
-        name: step1
+      - name: step1
         env:
           REF: ${{ github.ref }}
         run: |
